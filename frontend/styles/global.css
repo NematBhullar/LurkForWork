@@ -1,0 +1,473 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial;
+}
+
+header {
+    background-color: #2A3467;
+    color: white;
+    border-bottom: 5px #a1efff solid;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    padding: .5rem 1rem;
+}
+
+a {
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    padding: .6rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid #777777;
+    width: 300px;
+    height: 25px;
+}
+
+h1 {
+    margin: 0;
+    padding: 1rem 1rem 2rem 1rem;
+    color: #2A3467;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: clamp(400px, 40vw, 80vw);
+}
+
+h2 {
+    margin: 0;
+    padding: 1rem 1rem 0rem 1rem;
+    color: #2A3467;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: clamp(400px, 40vw, 80vw);
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: x-large;
+    color: #555555;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+li {
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+/* Pages */
+#loginpage, #registrationpage, .formLayout {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 1rem;
+    width: clamp(400px, 40vw, 80vw);
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 4px 8px 3px rgb(0, 0, 0, 0.2);
+}
+
+#accountpage img {
+    width: 15%;
+}
+
+#feedpage, #accountpage {
+    background-image: linear-gradient(#a1efff, #a5aafc);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    background-image: linear-gradient(#a1efff, #a5aafc);
+    background-size: cover;
+}
+
+.divHorizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.divVertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formLayout {
+    display: grid;
+    height: 600px;
+    transform: translate(-50%, -35%);
+    align-items: center;
+    justify-content: center;
+}
+
+.formLayout .divHorizontal > label {
+    font-weight: bold;
+}
+
+.formElement {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    font-weight: bold;
+}
+
+.formElement input {
+    width: clamp(340px, 15vw, 50vw);
+}
+
+.formElement > button {
+    align-self: center;
+}
+
+/* Form */
+.centreForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+}
+
+.centreForm label {
+    align-items: left;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Post */
+.post {
+    border-bottom: 1px #CDCDCD solid;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: clamp(400px, 50vw, 80vw);
+    row-gap: 0.5rem;
+    margin: 1rem;
+}
+
+.post img {
+    max-width: 15%;
+}
+
+.postAccountDiv {
+    border-radius: 1rem 1rem 0rem 0rem;
+    width: clamp(400px, 50vw, 80vw);
+    background-color: #2A3467;
+    color: white;
+
+}
+
+.postChildDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+
+/* Modal */
+.backgroundModal {
+    z-index: 5;
+    background-color: rgba(218, 218, 218, 0.636);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+}
+
+.modal {
+    z-index: 10;
+    background-color: white;
+    cursor: default;
+    width: clamp(390px, 50%, 70%);
+    min-height: 30%;
+    max-height: 70%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 8px 10px darkgray;
+    border-radius: 1rem;
+}
+
+.modal > div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.modal * {
+    z-index: 100;
+}
+
+.modalCloseBtn {
+    z-index: 15;
+    position: absolute;
+    align-self: flex-end;
+    transform: translate(40%, -40%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.closeBtnBackground {
+    background-image: url('../assets/close_red_x.png');
+    background-size: cover;
+}
+
+/* Account Page */
+.accountDiv {
+    background-color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    width: 400px;
+}
+
+.accountDiv .linkedaccount > a {
+    color: black;
+}
+
+.accountDiv > img {
+    min-width: 250px;
+}
+
+.accountDiv > p {
+    font-size: medium;
+    font-weight: bold;
+    color: #333333;
+}
+
+.watchedByDiv .linkedaccount {
+    justify-content: left;
+}
+
+.watchedByDiv {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border-top: 1px #CCCCCC solid;
+    width: 350px;
+    justify-content: center;
+    text-align: center;
+    color: #2A3467;
+}
+
+/* Account */
+.linkedaccount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 2rem;
+}
+
+.linkedaccount > img {
+    width: 2rem !important;
+    cursor: pointer;
+}
+
+.linkedaccount > a {
+    text-decoration: none;
+    color: white;
+}
+
+.profilePic {
+    min-width: 50px;
+    max-width: 10%;
+}
+
+/* Login and Registration - Inputs and Labels */
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-size: small;
+    font-weight: bold;
+}
+
+.inputLabel {
+    padding-left: 1rem;
+    padding-bottom: 0.1rem;
+    color: black;
+    font-weight: bold;
+}
+
+/* Remove hyperlinks for page links */
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.linkBtn {
+    margin: 1rem;
+    color: #6595F1;
+    font-size: medium;
+    font-weight: bold;
+    align-items: center;
+}
+
+/* Buttons */
+.btn, .likeBtn, .unlikeBtn, .blueStyle, .blueBtn, .dateStyle, .whiteBtn, .subBtn, .redBtn {
+    width: 150px;
+    padding: 0.7rem 0 0.7rem 0;
+    margin: 0.5rem 1rem 1rem 1rem;
+    border-radius: 30px;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+}
+
+.redBtn, .likeBtn {
+    margin-bottom: 1rem;
+    background-color: #CC3B45;
+    border: 3px #CC3B45 solid;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.unlikeBtn {
+    background-color: white;
+    text-decoration: none;
+    border: 3px #CC3B45 solid;
+    cursor: pointer;
+    color: #CC3B45;
+}
+
+.blueBtn, .dateStyle {
+    background-color: #2A3467;
+    text-decoration: none;
+    border: 3px #2A3467 solid;
+    color: white;
+}
+
+.blueBtn {
+    width: 150px;
+    cursor: pointer;
+}
+
+.dateStyle {
+    width: 300px;
+    font-size: medium;
+}
+
+.whiteBtn {
+    background-color: white;
+    text-decoration: none;
+    border: 3px #2A3467 solid;
+    color:#2A3467;
+}
+
+.subBtn {
+    background-color: #6595F1;
+    text-decoration: none;
+    border: 3px #6595F1 solid;
+    cursor: pointer;
+    color: white;
+}
+
+/* Other Post Elements */
+.imgJob {
+    min-width: 200px;
+    max-width: 15%;
+    padding: 0.5rem;
+}
+
+.commentInput {
+    padding: .6rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid #777777;
+    width: clamp(100px, 15vw, 300px);
+    height: 25px;
+}
+
+/* Display comments */
+.commentLayout {
+    display: block;
+    text-align: center;
+}
+
+.commentItem {
+    border-top: 1px solid #CDCDCD;
+}
+
+.commentItem .linkedaccount > a {
+    color: black;
+}
+
+.commentItem > p {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Customised divs */
+.customHeaderDiv {
+    width: clamp(400px, 50vw, 80vw);
+}
+
+.statsDiv {
+    padding: 0.5rem;
+}
+
+.statsDiv b {
+    padding: 0 2rem;
+}
