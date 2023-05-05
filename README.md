@@ -1,13 +1,8 @@
-# Assessment 3 - Vanilla JS: LurkForWork
+# LurkForWork
 
 1. Background & Motivation
 2. The Task
 3. Getting Started
-4. Constraints & Assumptions
-5. Marking Criteria
-6. Originality of Work
-7. Submission
-8. Late Submission Policy
 
 ## 0. Change Log
 
@@ -177,8 +172,6 @@ Users can access different pages using URL fragments:
 /#profile=4
 ```
 
-_No course assistance in lectures or on the forum will be provided for this component, you should do your own research as to how to implement this._
-
 #### 2.8. Bonus Marks (5%)
 
 An extra 5% of the assignment can be attained via bonus marks, meaning a maximum mark of 105/100. Any bonus marks that extend your ass2 mark above 100% will bleed into other assignment marks, but cannot contribute outside of the 75% of the course that is allocated for assignment marks
@@ -219,9 +212,9 @@ This will start up a second HTTP server where if you navigate to `http://localho
 
 You are prohibited from modifying the backend. No work needs to be done on the backend. It's provided to you simply to power your frontend.
 
-The backend server exists in your individual repository. After you clone this repo, you must run `yarn install` in `backend` directory once.
+The backend server exists in your individual repository. After you clone this repo, you must run `npm install` in `backend` directory once.
 
-To run the backend server, simply run `yarn start` in the `backend` directory. This will start the backend.
+To run the backend server, simply run `npm start` in the `backend` directory. This will start the backend.
 
 To view the API interface for the backend you can navigate to the base URL of the backend (e.g. `http://localhost:5005`). This will list all of the HTTP routes that you can interact with.
 
@@ -232,166 +225,3 @@ Your backend is persistent in terms of data storage. That means the data will re
 Once the backend has started, you can view the API documentation by navigating to `http://localhost:[port]` in a web browser.
 
 The port that the backend runs on (and that the frontend can use) is specified in `frontend/src/config.js`. You can change the port in this file. This file exists so that your frontend knows what port to use when talking to the backend.
-
-Please note: If you manually update database.json you will need to restart your server.
-
-Please note: You CANNOT modify the backend source code for bonus marks.
-
-### 3.3. Taking the first steps
-
-This is how we recommend you start the assignment:
- 1. Read the entire spec, including a thorough read of section 2 so you know what is ahead of you!
- 2. Try to load up the `index.html` on your browser with a simple "Hello world" text just to sanity check you know what page you're trying to load.
- 3. Plan out your UI by thinking about all of the key screens and what information they rely on
- 4. Try to load up the backend and verify you've got it working by making a simple API call to `/feed` (which should return you an empty list)
- 5. Good luck!
-
-## 4. Constraints & Assumptions
-
-### 4.1. Javascript
-
- * You must implement this assignment in ES6-compliant Vanilla JavaScript. You cannot use ReactJS, JQuery, or other abstract frameworks. You can not, for example, use a popular Javascript framework such as <a href="https://angular.io/">Angular</a> or <a href="https://reactjs.org/">React</a>.
- * You may **NOT** directly use external JavaScript. Do not use NPM except to install any other development libraries without prior approval from course authority.
-
-### 4.2. CSS and other libraries
-
- * You may use small amounts (&lt; 10 lines) of general purpose code (not specific to the assignment) obtained from a site such as Stack Overflow or other publically available resources. You should clearly attribute the source of this code in a comment with it. You can not otherwise use code written by another person.
- * You may include external CSS libraries in this assignment (with the `<link />` tag). You must attribute these sources (i.e. provide the URL/author in source code comments). For example, you are permitted to use the popular <a href="https://getbootstrap.com/">Bootstrap</a> CSS framework. Some Bootstrap functionality relies on accompanying Javascript. You are permitted to include this Javascript. The Javascript accompanying Bootstrap requires the popular general purpose Javascrpt library <a href="https://jquery.com/">jQuery</a>. You are permitted to include <b>jQuery</b> so bootstrap can use it. However you are not permitted to use <b>jQuery</b> in the code you write for the assignment.
-
-### 4.3. Browser Compatibility
-
-You should ensure that your programs have been tested on one of the following two browsers:
- * Locally, Google Chrome (various operating systems)
- * On CSE machines, Chromium
-
-### 4.4. Other Requirements
-
- * The specification is intentionally vague to allow you to build frontend components however you think are visually appropriate. Their size, positioning, colour, layout, is in virtually all cases completely up to you. We require some basic criteria, but it's mainly dictating elements and behaviour.
- * This is not a design assignment. You are expected to show common sense and critical thinking when it comes to basic user experience and visual layout, but you are not required to be creative to achieve full marks.
- * Your web app must be a single page app. This means that there is only one initial browser load of content on one html page, and all subsequent dynamic changes to the page are based on Javascript DOM manipulation. If you do not build a single page app (e.g. using links to multiple HTML pages), you will receive a 50% penalty of your mark.
-
-### 4.5. Static HTML, innerHTML, DOM manipulation
-
-In this assignment, you are:
- * Allowed to add static HTML/CSS to the stub website provided (i.e. you can put raw HTML/CSS as if it's a static page, even if you then later manipulate it with JavaScript).
- * Allowed to build HTML elements and add CSS properties to the DOM via JavaScript. We expect this to be the most common way students build these pages.
- * Are strictly **not** allowed to use the `innerHTML` property of nodes/tags to set the inner HTML of an element. This has security vulnerabilities and is in general not best practice. Either statically add the HTML/CSS and manipulate it with JavaScript, or generate and build nodes/elements in JavaScript (just like in lectures/tutes/labs), or both. But don't set inner HTML. The use of any `innerHTML` will result in a 50% penalty of your mark.
-
-### 4.6. Async, Await, Promises
-
-You are strictly **not** allowed to use the `async` and `await` syntax in this assignment. You must use ES6 Promises. The use of any `async` or `await` will result in a 50% penalty of your mark.
-
-## 5. Marking Criteria
-
-Your assignment will be hand-marked by tutor(s) in the course according to the criteria below.
-
-Please note: When we test your UI we will use a pre-loaded database JSON that already has jobs and users and watches added to it. 
-
-<table>
-	<tr>
-		<th>Criteria</th>
-		<th>Weighting</th>
-		<th>Description</th>
-	</tr>
-	<tr>
-		<td>Compliance to task requirements</td>
-		<td>70%</td>
-		<td>
-			<ul>
-				<li>Each milestone specified a particular % of overall assignment (summing up to 70%). Implement those components as required to receive the marks.</li>
-        <li>You <b>MUST</b> update the <code>progress.csv</code> file in the root folder of this repository as you complete things partially or fully. The valid values are "NO", "PARTIAL", and "YES". Updating this is necessary so that your tutor knows what to focus on and what to avoid - giving them the best understanding of your work and provide you with marks you have earned.</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td>Mobile Responsiveness</td>
-		<td>15%</td>
-		<td>
-			<ul>
-				<li>Your application is usable for desktop sizes generally, tablet sizes generally, and mobile sizes generally (down to 400px wide, 700px high).</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td>Code Style</td>
-		<td>10%</td>
-		<td>
-			<ul>
-				<li>Your code is clean, well commented, with well-named variables, and is well laid out.</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td>Usability & Accessibility</td>
-		<td>5%</td>
-		<td>
-			<ul>
-				<li>Your application is usable and easy to navigate. No obvious usability issues or confusing layouts/flows.</li>
-				<li>Your application follows standard accessibility guidelines, such as use of alt tags, and colours that aren't inaccessible.</li>
-				<li>Describe any attempts you've made to improve the usability/accessibility in `usability.md`</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-    <td>(Bonus Marks) Extra Features</td>
-    <td>5%</td>
-    <td>
-      <ul>
-        <li>Implementation of extra features that are not included in the spec.</li>
-        <li>Extra features should be non-trivial, have a clear justification for existing, and show either a form of technical, product, or creative flare.</li>
-        <li>Any extra features written down in `BONUS.md` in the project folder</li>
-        <li>Any bonus marks that extend your ass3 mark above 100% will bleed into other assignment marks, but cannot contribute outside of the 80% of the course that is allocated for assignment marks</li>
-        <li><b>Expectations placed on solo groups will be half of that of pairs to achieve the same mark.</b></li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-## 6. Originality of Work
-
-The work you submit must be your own work. Submission of work partially or completely derived from
-any other person or jointly written with any other person is not permitted.
-
-The penalties for such an offence may include negative marks, automatic failure of the course and
-possibly other academic discipline. Assignment submissions will be examined both automatically and
-manually for such submissions.
-
-Relevant scholarship authorities will be informed if students holding scholarships are involved in
-an incident of plagiarism or other misconduct.
-
-Do not provide or show your assignment work to any other person &mdash; apart from the teaching
-staff of COMP6080.
-
-If you knowingly provide or show your assignment work to another person for any reason, and work
-derived from it is submitted, you may be penalized, even if the work was submitted without your
-knowledge or consent.  This may apply even if your work is submitted by a third party unknown to
-you.
-
-Every time you make commits or pushes on this repository, you are acknowledging that the work you
-submit is your own work (as described above).
-
-As per the course outline, "Pairs will be required to contribute regularly to gitlab and in reasonably equal contributions as we still assess contributions individually (there is no blanket group mark assigned). Failure to do so may result in a loss of marks."
-
-If you are not working in a pair, we still strongly encourage you to commit small amounts of code regularly. This will assist you in managing any allegations of plagiarism that you feel are not correct.
-
-Note you will not be penalized if your work has the potential to be taken without your consent or
-knowledge.
-
-## 8. Submission
-
-This assignment is due *Monday 27th of March, 10am*.
-
-To submit your assignment, you must complete the following two steps in order:
- * Ensure you've pushed all of your code to your gitlab master branch. You can check if you've done this properly by seeing what code is on the gitlab site on your master branch.
- 
-This will submit the latest commit on master as your submission.
-
-You do NOT have to run a submit command for this assignment (we are experimenting with not using the command).
-
-It is your responsibiltiy to ensure that your code can run successfully when cloned fresh from Gitlab.
-
-For pairs, only one team member needs to submit.
-
-## 8. Late Submission Policy
-
-No late submission are accepted.
