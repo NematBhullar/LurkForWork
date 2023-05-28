@@ -1,17 +1,19 @@
 # LurkForWork
 
-1. Background & Motivation
-2. Getting Started
+1. About
+2. Background 
+3. Getting Started
 
-## 1. Background & Motivation
+## 1. About 
+This project consists of building a **frontend** website in Vanilla JS. This frontend will interact with a RESTful API HTTP backend that is built in JavaScript (NodeJS express server). The task is to build a frontend for a rip-off version of the popular professional social networking tool [LinkedIn].
+
+## 2. Background 
 
 Web-based applications are becoming the most common way to build a digital capability accessible to a mass audience. While there are modern tools that help us build these rapidly, it's important to understand the fundamental JavaScript-based technology and architectures that exist, both to gain a deeper understanding for when these skills may be needed, but also to simply understand the mechanics of fundamental JS. Even when working with a high level framework like ReactJS, understanding (in-concept) the code that it is transpiled to will ensure you're a more well rounded web-based engineer.
 
-This project consists of building a **frontend** website in Vanilla JS (no ReactJS or other frameworks). This frontend will interact with a RESTful API HTTP backend that is built in JavaScript (NodeJS express server). The task is to build a frontend for a UNSW rip-off version of the popular professional social networking tool [LinkedIn].
+## 3. Getting started
 
-## 2. Getting started
-
-### 2.1. The Frontend
+### 3.1. The Frontend
 
 To work with your frontend code locally with the web server, you may have to run another web server to serve the frontend's static files.
 
@@ -27,7 +29,7 @@ Where `[port]` is the port you want to run the server on (e.g. `8080`). Any numb
 
 This will start up a second HTTP server where if you navigate to `http://localhost:8000` (or whatever URL/port it provides) it will run your `index.html` without any CORs issues.
 
-### 2.2. The Backend
+### 3.2. The Backend
 
 The backend server exists in your individual repository. After you clone this repo, you must run `npm install` in `backend` directory once.
 
