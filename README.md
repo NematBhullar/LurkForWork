@@ -1,4 +1,5 @@
 # LurkForWork
+<img width="1350" alt="Screenshot 2023-08-25 at 5 48 59 pm" src="https://github.com/NematBhullar/LurkForWork/assets/91060343/a42cb3b5-b375-43b5-a024-cab23a7fd572">
 
 1. About
 2. Background 
